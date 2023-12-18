@@ -20,7 +20,7 @@ let friends = '상원, 다영, 주현, 수양, 지수, 충만, 윤호, 미리, �
 friends[2] = '용범'
 
 // 배열 요소 추가
-let unshift = friends.unshift('경민');  // 항목 날아가지 않음, length 유지
+let unshift = friends.unshift('경민');
 let push = friends.push('지우');
 
 

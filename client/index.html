@@ -7,27 +7,23 @@
     <link rel="shortcut icon" href="./assets/tiger.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./lib/utils/typeOf.js"></script>
-    <script src="./chapter/core/21.tryCatch.js" defer></script>
+    <script src="./lib/dom/getNode.js"></script>
+    <script src="./lib/dom/insert.js"></script>
+    <script src="./lib/dom/attr.js"></script>
+
+    <script src="./chapter/dom/09.delegation.js" defer></script>
   </head>
   <body>
-    <h1>
-      <span class="first">hello</span>
-      <!-- 주석 -->
-      <span class="second">javascript</span>
-      <span class="third">javascript</span>
-      <hr />
+    <!-- <div class="ground">
+      <img src="https://en.js.cx/clipart/ball.svg" id="ball" alt="축구공" />
+    </div> -->
 
-      <div>
-        <label for="todo">할일</label>
-        <input type="text" id="todo" />
-        <button class="register">등록</button>
-
-        <h4>해야할 목록</h4>
-        <ul class="todoList"></ul>
-      </div>
-    </h1>
-
-    <div class="menu"></div>
-    <a href="/" class="menu-button">❎</a>
+    <nav>
+      <ul>
+        <li class="about" data-name="about">😀ABOUT</li>
+        <li class="home" data-name="home">🏠HOME</li>
+        <li class="contact" data-name="contact">📞CONTACT</li>
+      </ul>
+    </nav>
   </body>
 </html>

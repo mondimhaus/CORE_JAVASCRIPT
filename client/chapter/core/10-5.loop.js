@@ -2,15 +2,14 @@
 /* For Of Loop     */
 /* --------------- */
 
-// for..of : 반복가능한 요소를 순환해줌, 배열에서 가장 자주 사용
 // for..in : 열거가능한 요소를 순환해줌, 객체에서 자주 사용
+// for..of : 반복가능한 요소를 순환해줌, 배열에서 가장 자주 사용
+// 예외 : String, Array : 반복 가능
 
 // enumerable : 열거 가능한
 // iterable : 반복 가능한
 // iterable object 문서 읽어보기
 
-// 반복 가능한 요소들은 for..of 로 순환이 가능함
-// 예외 : String, Array : 반복 가능
 
 // 유사배열 arraylike : 배열처럼 보이지만 배열이 아님
 const arrayLike = {
@@ -24,7 +23,7 @@ const arrayLike = {
 const str = '유사배열입니다';
 
 for (let value of str) {
-  // console.log(value);
+  console.log(value);
 }
 
 
@@ -57,13 +56,14 @@ const languages = [
 
 
 for (let value of languages) {
-  // console.table(value);
+  console.table(value);
 
   let name = value.name;
   // if (name === 'Java') continue;
   // if (name.includes('Java') && name.length < 5) continue;
   if (name.includes('Java') && name.length < 5) break;
-  // console.table(value);
+
+  console.table(value);
 }
 
 
@@ -111,10 +111,8 @@ const randomUser = {
 
 Object.prototype.nickName = 'tiger';
 
-// 객체의 키, 값 순환
-// - for ~ in 문
 
-// 재귀 함수
+/*    재귀 함수   */
 
 // for(let key in randomUser){
 //   if(Object.prototype.hasOwnProperty.call(randomUser,key)){
@@ -149,17 +147,18 @@ Object.prototype.nickName = 'tiger';
 // [Static Method], 배열로 반환하는 공통점이 있는 메소드들
 // Object.keys();
 // Object.values();
-// Object.entries(); // 객체를 배열로 반환 > key, value를 하나의 쌍으로 담은 배열
+// Object.entries();  : 객체를 배열로 반환 (key, value를 하나의 쌍으로 담음) 
 
 // console.log(Object.entries(randomUser));
 
-const z1 = performance.now()
+const z1 = performance.now()  // 성능 비교
 
 for(let keyValue of Object.entries(randomUser)){
+
   let key = keyValue[0];
   let value = keyValue[1];
 
-  console.log('\tL1 : ' ,value);
+  console.log('\tL1 : ',value);
 
   if(typeof value === 'object'){
     
@@ -200,3 +199,4 @@ if (isNaN(parseInt('name1'.slice(-1))) == false) {
 }
 
 console.log(object);
+

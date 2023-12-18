@@ -9,7 +9,6 @@ var outside = 'outer';
 
 {
   console.log(outside);
-
   var inside = 'inner';
 }
 
